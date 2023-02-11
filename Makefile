@@ -25,6 +25,9 @@ build-container:
 test:
 	docker run -ti -v ${PWD}:/code -w /code -p 8080:8080 $(IMAGE_NAME):$(IMAGE_TAG_DEV) php vendor/bin/phpunit --colors=always --no-coverage
 
+infection:
+	docker run -ti -v ${PWD}:/code -w /code -p 8080:8080 $(IMAGE_NAME):$(IMAGE_TAG_DEV) php vendor/bin/infection
+
 composer-install:
 	${COMPOSER_CMD} install --verbose
 

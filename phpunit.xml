@@ -12,11 +12,8 @@
 
     <coverage pathCoverage="false">
         <include>
-            <directory suffix=".php">./src</directory>
+            <directory suffix=".php">./src/</directory>
         </include>
-        <exclude>
-            <directory suffix=".php">./src/DependencyInjection</directory>
-        </exclude>
         <report>
             <clover outputFile="./test/test-reports/clover.xml"/>
             <html outputDirectory="./test/test-reports/coverage/html" lowUpperBound="50" highLowerBound="95"/>
@@ -24,7 +21,7 @@
         </report>
     </coverage>
     <testsuites>
-        <testsuite name="Test">
+        <testsuite name="All Tests">
             <directory suffix="Test.php">./test/</directory>
         </testsuite>
     </testsuites>
