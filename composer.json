@@ -2,7 +2,8 @@
     "name": "braddle/php-uk-2023",
     "description": "Code for TDD Workshop at PHPUK 2023",
     "type": "project",
-    "require": {
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "phpunit/phpunit": "^9.5",
         "mockery/mockery": "^1.5",
         "infection/infection": "^0.26.18"
@@ -13,10 +14,19 @@
             "Braddle\\PhpUk2023\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Braddle\\PhpUk2023\\Test\\": "test/"
+        }
+    },
     "authors": [
         {
             "name": "Mark Bradley",
             "email": "braddle@gmail.com"
+        },
+        {
+            "name": "Juan Manuel Cabello",
+            "email": "kerunaru@gmail.com"
         }
     ],
     "config": {
